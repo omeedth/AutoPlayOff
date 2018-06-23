@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Options</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="jquery-3.3.1.slim.min.js"></script>
+  </head>
+  <body>
+
+    <style>
+
+      * {
+
+      }
+
+      body, html {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .middle {
+        margin: auto;
+      }
+
+      .width-100 {
+        width: 100px;
+      }
+
+      .width-200 {
+        width: 200px;
+      }
+
+    </style>
+
+    <div id="content">
+
+      <!-- Navigation -->
+
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+
+      <!-- Jumbotron -->
+
+      <div class="jumbotron jumbotron-fluid mb-0">
+        <div class="container">
+          <h1 class="display-4">Stop Autoplay</h1>
+          <p class="lead">We will get rid of those pesky video ads that pop up!</p>
+        </div>
+      </div>
+
+      <!-- Save -->
+
+      <div class="input-group middle p-3 width-200">
+        <div class="input-group-prepend">
+          <button id="save" class="btn btn-outline-primary " type="button" disabled>Save</button>
+        </div>
+        <input id="status" type="text" class="form-control border-primary text-center" placeholder="Saved" aria-label="" aria-describedby="basic-addon1" disabled>
+      </div>
+
+      <!-- Form -->
+
+      <div class="center border container-fluid p-3 mb-4 bg-light">
+        <div class="list-group">
+          <button value="Remove" type="button" class="list-group-item list-group-item-action">Remove Video</button>
+          <button value="Mute" type="button" class="list-group-item list-group-item-action">Mute Video</button>
+          <button value="Nothing" type="button" class="list-group-item list-group-item-action">Do Nothing</button>
+        </div>
+
+        <br>
+
+        <form>
+          <div class="form-group">
+            <label for="whitelist middle">Whitelist</label>
+            <input type="text" class="form-control" id="whitelist" placeholder="Ex: https://www.youtube.com/">
+          </div>
+        </form>
+
+        <div class="container-fluid p-3 border bg-white text-center" id="websites">
+
+          <!-- Whitelisted Websites Here -->
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="options.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "AutoPlayOff",
+  "description": "This extension will find all of the videos on the page that auto play and stop them from doing so",
+  "version": "1.0",
+  "content_scripts": [
+   {
+     "matches": ["<all_urls>"],
+     "js": ["jquery-3.3.1.slim.min.js","ContentScript.js"]
+   }
+ ],
+  "permissions": [
+   "activeTab",
+   "storage"
+ ],
+ "options_page": "options.html"
+}

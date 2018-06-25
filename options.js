@@ -67,19 +67,32 @@ if(e.which == 13) {
   var website = $("#whitelist").val();
   $("#whitelist").val('');
 
-  // Add to website
-  $("#websites").append('<p class="url border-bottom">' + website + '</p>');
+  if(valid(website)) {
 
-  // Update
-  if(saved) {
-    saved = false;
-    $("#save").removeAttr("disabled");
-    $("#status").attr("placeholder", "Not Saved");
+    // Add to website
+    $("#websites").append('<p class="url border-bottom">' + website + '</p>');
+
+    // Update
+    if(saved) {
+      saved = false;
+      $("#save").removeAttr("disabled");
+      $("#status").attr("placeholder", "Not Saved");
+    }
+
   }
 
 }
 
 });
+
+function valid(url) {
+
+  if(url.startsWith("https://") || url.startsWith("http://")) {
+    return true;
+  }
+  return false;
+
+}
 
 // Saves options to chrome.storage
 function save_options() {
